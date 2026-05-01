@@ -24,6 +24,40 @@ A lightweight local AI Q&A web app built with FastAPI and Jinja templates. It pr
 - Ollama installed
 - A local Ollama model available (default in code: `llama3`)
 
+## Install Ollama
+
+Use the official Ollama installer for your platform:
+
+### macOS
+
+- Download the macOS app from https://ollama.com/download/Ollama.dmg
+- Ollama requires macOS 14 Sonoma or later
+- Open the `.dmg`, drag Ollama to `Applications`, then launch it once
+
+### Windows
+
+- Download the Windows installer from https://ollama.com/download/OllamaSetup.exe
+- Ollama requires Windows 10 or later
+- Run the installer, then open Ollama after installation completes
+
+### Linux
+
+Run the official install script:
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+For manual Linux installation details, see https://docs.ollama.com/linux
+
+### Verify the Install
+
+After installation, start Ollama if it is not already running and pull the default model used by this app:
+
+```bash
+ollama pull llama3
+```
+
 ## Setup
 
 ```bash
