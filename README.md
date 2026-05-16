@@ -95,6 +95,23 @@ http://127.0.0.1:8000
 3. The app sends a request to `http://localhost:11434/api/chat`.
 4. The response is rendered on `/ask` using `answer.html`.
 
+## Troubleshooting
+
+### Virtual Environment Creation Error
+
+**Error:** `Error: [Errno 2] No such file or directory: '.venv/bin/python3'`
+
+**Cause:** This occurs when the `.venv` directory is partially created or corrupted from a failed setup attempt.
+
+**Solution:** Remove and recreate the virtual environment:
+
+```bash
+rm -rf .venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install fastapi uvicorn httpx jinja2 python-multipart
+```
+
 ## Notes
 
 - If Ollama is not running, `/ask` requests will fail.
